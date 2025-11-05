@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Bites - Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="fas fa-utensils me-2"></i>Delicious Bites</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero d-flex align-items-center text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold text-gold">Welcome to Delicious Bites</h1>
+      <p class="lead">Fresh ingredients, authentic taste & an unforgettable experience.</p>
+      <a href="#menu" class="btn btn-custom btn-lg mt-3">View Menu</a>
+    </div>
+  </section>
+
+  <!-- Featured Dishes -->
+  <section id="featured" class="py-5 bg-dark-2">
+    <div class="container">
+      <h2 class="section-title text-center text-gold mb-5">Featured Dishes</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card dish-card border-0">
+            <img src="Assets/Picture/pasta.jpg" class="card-img-top" alt="Pasta">
+            <div class="card-body text-center">
+              <h5 class="card-title text-light">Classic Pasta</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card dish-card border-0">
+            <img src="Assets/Picture/burger.jpeg" class="card-img-top" alt="Burger">
+            <div class="card-body text-center">
+              <h5 class="card-title text-light">Gourmet Burger</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card dish-card border-0">
+            <img src="Assets/Picture/salad.jpg" class="card-img-top" alt="Salad">
+            <div class="card-body text-center">
+              <h5 class="card-title text-light">Fresh Salad</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#menu" class="btn btn-custom btn-lg">Explore Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="section-title text-center text-gold mb-5">Find Us</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
+          <h3 class="text-gold mb-3">Contact Info</h3>
+          <ul class="list-unstyled fs-5">
+            <li><i class="fas fa-map-marker-alt me-2 text-gold"></i>123 Food Street, City</li>
+            <li><i class="fas fa-phone me-2 text-gold"></i>+1 (123) 456-7890</li>
+            <li><i class="fas fa-envelope me-2 text-gold"></i>info@deliciousbites.com</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d113056.20120688742!2d68.86041082857504!3d27.686200542854653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sRoyal%20Taj%20Restaurant!5e0!3m2!1sen!2s!4v1762328983553!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5 text-light text-center">
+    <div class="container">
+      <div class="social-links mb-3">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="mb-0">&copy; 2025 Delicious Bites | Designed by <span class="text-gold">Furqan Shaikh</span></p>
+    </div>
+  </footer>
+
+  <script src="bootstrap.bundle.js"></script>
+</body>
+</html>
