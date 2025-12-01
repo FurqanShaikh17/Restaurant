@@ -1,0 +1,154 @@
+body{
+    background-color: black;
+}
+ .navbar {
+  background-color: #1a1a1a !important;
+  transition: all 0.3s ease;
+}
+.navbar-brand { color: #f5b041 !important; }
+.nav-link { color: #ffffff !important; }
+.nav-link:hover { color: #f5b041 !important;
+text-shadow: 0 0 8px #f5b041;}
+.dish-card {
+   background-color: rgb(20, 20, 20);
+  border-radius: 12px;
+  overflow: hidden;
+  color:  #f5b041 !important;
+  box-shadow: 2px 2px 6px 0px #ff9e01 !important;
+    transition: transform .3s;
+}
+.dish-card:hover {
+   transform:translate(0px, -8px);
+    box-shadow: 2px 2px 26px 0px #ff9e01 !important;
+}
+.dish-card img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+.grid{
+   margin-top: 80px;
+   margin-left: 10%;
+   margin-right: 10%;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 30px;
+   align-items: center;
+}
+
+.grid > article{
+    /* margin-left: -20px;
+    margin-right: -20px; */
+  background-color: rgb(20, 20, 20);
+  border: none;
+  color:  #f5b041 !important;
+  box-shadow: 2px 2px 6px 0px #ff9e01 !important;
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: transform .3s;
+  
+}
+.grid > article:hover{
+    transform:translate(0px, -8px);
+    box-shadow: 2px 2px 26px 0px #ff9e01 !important;
+}
+
+.grid >article img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.text{
+    padding: 0 20px 20px;
+}
+
+.text h3{
+    text-transform: uppercase;
+}
+
+.text button{
+    background: #f5b041 !important;
+    border-radius: 20px;
+    border: none;
+
+}
+
+/* .hero-2 {
+  width: 100%;
+  height: 500px; /* thori si height zyada */
+  /* position: relative;
+  overflow: hidden;
+}
+
+.hero-2 img {
+ 
+  
+} */ */
+ 
+.hero img{
+  /*  */
+  height: 500px;
+  object-fit: contain;
+  filter: brightness(0.5);
+  background: #000;
+  border-radius: 5px;
+}
+#container{
+  color: #f5b041;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.hero-title-2 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5b041 !important;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.7);
+}
+.follow{
+   color: #f5b041 !important;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   background: #1a1a1a;
+   margin-top: 10px;
+     
+}
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #f5b041;
+  /* padding: 40px 0; */
+  text-align: center;
+  margin-top: 40px; /* cards ke upar se chhota gap */
+  margin-bottom: 0; /* niche ka extra space khatam */
+  border-top: 2px solid #f5b041; /* optional */
+}
+
+
+.footer a {
+  color: #f5b041;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  
+}
+
+.footer a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+
+.follow {
+  color: #f5b041 !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: #1a1a1a;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Delicious Restaurant</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        .form-input:focus {
+
+            border-color: #ff0000;
+            outline: 0;
+            box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.12);
+        }
+        
+        .vis-btn {
+            -webkit-tap-highlight-color: transparent;
+            
+        }
+        #back{
+            background-color: #ff0000;
+        }
+        
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111827] dark:text-white">
+    <div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 group/design-root" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+
+        <div class="w-full max-w-4xl">
+            <div class="flex flex-col md:flex-row bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl">
+
+                <!-- Left: visual (hidden on small screens) -->
+                <div class="relative hidden md:flex md:w-1/2 lg:w-5/12">
+                    <div class="absolute inset-0 bg-black/20 mix-blend-normal"></div>
+                    <div class="h-full w-full bg-cover bg-center" aria-hidden="true" style='background-image: url("6.png");'></div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="w-full md:w-1/2 lg:w-7/12 p-6 sm:p-10 flex items-center justify-center">
+                    <div class="w-full max-w-md">
+                        <h1 class="text-3xl sm:text-4xl font-black leading-tight">    Welcome to Delicious Bites
+</h1>
+                        
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mt-3">Sign in to your account</p>
+
+
+
+                        <form id="loginForm"  onsubmit="login()" class="mt-6 flex flex-col gap-4" autocomplete="on">
+
+                            <label class="flex flex-col gap-2">
+                <span class="text-sm font-medium">Email</span>
+                <input id="email" name="email" type="email" required class="form-input h-12 rounded border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white px-3" placeholder="Enter your email address" aria-label="Email" />
+              </label>
+
+                            <label class="flex flex-col gap-2">
+                <span class="text-sm font-medium">Password</span>
+                <div class="relative">
+                  <input id="password" name="password" type="password" required class="form-input h-12 rounded border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-white px-3 pr-10 w-full" placeholder="Enter your password" aria-label="Password" />
+                  <button type="button" id="togglePassword" aria-label="Toggle password visibility" class="absolute inset-y-0 right-0 flex items-center pr-3 vis-btn text-gray-500 hover:text-gray-700 dark:hover:text-gray-200">
+                    <span class="material-symbols-outlined" id="toggleIcon">visibility_off</span>
+                  </button>
+                </div>
+              </label>
+
+                            <div class="flex items-center justify-between text-sm">
+                                <label class="flex items-center gap-2">
+                  <input id="remember" name="remember" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary/50 dark:bg-gray-700 dark:border-gray-600" />
+                  <span>Remember me</span>
+                </label>
+                                <a href="HOME.HTML" class="text-primary font-medium hover:underline" id="togglePassword">Forgot Password?</a>
+                            </div>
+
+                            <button type="submit" id="back" class="mt-2 h-12 w-full rounded  bg-primary text-white font-bold hover:bg-primary/90 active:scale-95 transition">Login</button>
+
+                            <p class="text-center text-sm text-gray-600 dark:text-gray-300 mt-4">Don't have an account? <a href="#" class="text-primary font-bold hover:underline">Register</a></p>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Password visibility toggle
+        const toggle = document.getElementById('togglePassword');
+        const pwd = document.getElementById('password');
+        const icon = document.getElementById('toggleIcon');
+        if (toggle && pwd) {
+            toggle.addEventListener('click', () => {
+                const isPwd = pwd.getAttribute('type') === 'password';
+                pwd.setAttribute('type', isPwd ? 'text' : 'password');
+                icon.textContent = isPwd ? 'visibility' : 'visibility_off';
+            });
+        }
+function login() {
+  window.location.href = "home.html";   // jis page par jana ho
+}
+        // Simple form handler (prevent default for demo)
+        const form = document.getElementById('loginForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // basic validation demo
+                const email = document.getElementById('email').value.trim();
+                if (!email) {
+                    alert('Please enter your email');
+                    return;
+                }
+                // here you'd call your API
+                alert('Submitted — demo only');
+            });
+        }
+
+        // Accessibility: show focus outlines only when tabbing
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') document.documentElement.classList.add('user-is-tabbing');
+        });
+    </script>
+</body>
+
+</html>
